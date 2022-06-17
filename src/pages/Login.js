@@ -5,7 +5,7 @@ const Login = () => {
   const { login } = useParams();
   console.log(login);
 
-  return <div>Login Page {login}</div>;
+  return <div style={{ backgroundColor: "gray" }}>Login Page {login}</div>;
 };
 
 export default Login;

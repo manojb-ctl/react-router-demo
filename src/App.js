@@ -1,15 +1,16 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, useRouteMatch } from "react-router-dom";
 import AuthLayout from "./Layout/AuthLayout";
 import MainLayout from "./Layout/MainLayout";
 import AdminLayout from "./Layout/AdminLayout";
 import Home from "./pages/Home";
 
 function App() {
+  let { path, url } = useRouteMatch();
+  console.log(path, url);
+
   return (
     <>
       <BrowserRouter>
-        {/* <AuthLayout /> */}
-
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/auth" exact component={AuthLayout} />
